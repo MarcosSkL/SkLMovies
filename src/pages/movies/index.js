@@ -20,6 +20,7 @@ const index = ({filmes}) => {
                                 <p className='textwhite'>Lançamento: <strong>{item.release_date}</strong></p>
                                 <div className="d-flex flex-column align-items-end">
                                     <Link href={'/movies/' + item.id} className='btn btn-info text-white'>Detalhes</Link>
+                                    
                                 </div>
                             </Card.Body>
                         </Card>
