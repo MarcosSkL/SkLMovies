@@ -9,7 +9,7 @@ const Actors = ({ filmesAtores, infAtores, imgAtores, series }) => {
         <Pagina titulo={infAtores.name}>
             <Row>
                 <Col md={3}>
-                    <Card.Img style={{ Width: '100%', height: '100%' }} variant="top" src={'https://image.tmdb.org/t/p/w500/' + infAtores.profile_path} />
+                    <Card.Img variant="top" src={'https://image.tmdb.org/t/p/w500/' + infAtores.profile_path} />
 
                 </Col>
                 <Col md={9}>
@@ -26,9 +26,11 @@ const Actors = ({ filmesAtores, infAtores, imgAtores, series }) => {
 
             <Row className="my-3">
                 {imgAtores.profiles.map((item) => (
-                    <Col md={1} key={item.id} className="m-3">
+                    <Col md={2} key={item.id} className="m-3">
 
-                        <img style={{ Width: '500px', height: '200px' }} src={'https://image.tmdb.org/t/p/w500/' + item.file_path} />
+                       <Link href={'https://image.tmdb.org/t/p/w500/' + item.file_path}>
+                       <img style={{ Width: 'auto', height: 'auto' }} src={'https://image.tmdb.org/t/p/w500/' + item.file_path} />
+                       </Link> 
 
                     </Col>
                 ))}
