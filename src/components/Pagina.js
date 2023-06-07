@@ -1,13 +1,14 @@
 import React from 'react'
 import Cabecalho from './Cabecalho'
-import Navbarprin from './Navbarprin'
+import Header from './Header'
+
 
 const Pagina = (props) => {
 
   return (
     <div className='h-full bg-gradient-to-tr from-gray-700 via-sky-950 to-black'>
-     
-      <Navbarprin />
+     <Header />
+   
       <div className="p-5 mb-4 bg-gradient-to-r">
         <div className="px-5 mx-5 bg-gradient-to-r from-indigo-500 to-cyan-500 bg-clip-text text-transparent ">
           <h1 className='font-bold p-5'>{props.titulo}</h1>

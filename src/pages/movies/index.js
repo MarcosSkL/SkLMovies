@@ -3,12 +3,16 @@ import React, { useEffect, useState } from 'react'
 import { Button, Card, Col, Row } from 'react-bootstrap'
 import Pagina from '../../components/Pagina'
 import apiMovies from '../../services/apiMovies'
+import Banner from '@/components/Banner'
 
-const index = ({filmes}) => {
+const index = ({ filmes }) => {
 
     return (
 
+
         <Pagina titulo="Filmes">
+            
+            <Banner />
 
             <Row className="px-1 mx-1">
                 {filmes.map(item => (
@@ -20,7 +24,7 @@ const index = ({filmes}) => {
                                 <p className='textwhite'>Lançamento: <strong>{item.release_date}</strong></p>
                                 <div className="d-flex flex-column align-items-end">
                                     <Link href={'/movies/' + item.id} className='btn btn-info text-white'>Detalhes</Link>
-                                    
+
                                 </div>
                             </Card.Body>
                         </Card>
@@ -39,6 +43,6 @@ export async function getServerSideProps(context) {
     const filmes = resultado.data.results
 
     return {
-      props: {filmes}
+        props: { filmes }
     }
-  }
+}
