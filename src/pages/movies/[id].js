@@ -12,7 +12,7 @@ const Detalhes = ({ filme, atores }) => {
                     <Card.Img style={{ Width: '100%', height: '100%' }} variant="top" src={'https://image.tmdb.org/t/p/w500/' + filme.poster_path} />
 
                 </Col>
-                <Col md={9}>
+                <Col md={9} className='text-slate-50'>
                     <h3>Sinopse</h3>
                     <p>{filme.overview}</p>
                     <p><strong>Data de Lançamento: </strong>{filme.release_date}</p>
@@ -33,16 +33,16 @@ const Detalhes = ({ filme, atores }) => {
             </Row>
 
 
-            <h3 className='pt-5'>Atores</h3>
+            <h3 className='pt-5 text-slate-50'>Atores</h3>
 
-            <Row className='p-3'>
+            <Row className='p-3 text-slate-50'>
 
                 {atores.cast.map(item => (
                     <Col md={2}>
 
 
                         <img style={{ Width: '500px', height: '200px' }} variant="top" src={'https://image.tmdb.org/t/p/w500/' + item.profile_path} />
-                        <Link href={'/actors/' + item.id} style={{ textDecoration: "none"}} ><p><em>{item.name}</em></p></Link>
+                        <Link href={'/actors/' + item.id} style={{ textDecoration: "none", color: "white"}} ><p><em>{item.name}</em></p></Link>
                     </Col>
 
                 ))}

@@ -12,7 +12,7 @@ const Actors = ({ filmesAtores, infAtores, imgAtores, series }) => {
                     <Card.Img variant="top" src={'https://image.tmdb.org/t/p/w500/' + infAtores.profile_path} />
 
                 </Col>
-                <Col md={9}>
+                <Col md={9} className="text-slate-50">
                     <h3>Biografia</h3>
                     <p>{infAtores.biography}</p>
                     <p><strong>Data de Nascimento: </strong>{infAtores.birthday}</p>
@@ -22,7 +22,7 @@ const Actors = ({ filmesAtores, infAtores, imgAtores, series }) => {
                 </Col>
             </Row>
 
-            <h2 className="pt-3">Imagens</h2>
+            <h2 className="pt-3 text-slate-50">Imagens</h2>
 
             <Row className="my-3">
                 {imgAtores.profiles.map((item) => (
@@ -36,7 +36,7 @@ const Actors = ({ filmesAtores, infAtores, imgAtores, series }) => {
                 ))}
             </Row>
 
-            <h2>Filmes</h2>
+            <h2 className="pt-3 text-slate-50">Filmes</h2>
 
             <Row className="my-3">
                 {filmesAtores.cast.map((item) => (
@@ -51,7 +51,7 @@ const Actors = ({ filmesAtores, infAtores, imgAtores, series }) => {
                 ))}
             </Row>
 
-            <h2>Series</h2>
+            <h2 className="pt-3 text-slate-50">Series</h2>
 
             <Row className="my-3">
                 {series.cast.map((item) => (

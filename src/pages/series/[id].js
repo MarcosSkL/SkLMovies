@@ -12,7 +12,7 @@ const Series = ({ series, atores }) => {
                     <Card.Img style={{ Width: '100%', height: '100%' }} variant="top" src={'https://image.tmdb.org/t/p/w500/' + series.poster_path} />
 
                 </Col>
-                <Col md={9}>
+                <Col md={9} className='text-slate-50'>
                     <h3>Sinopse</h3>
                     <p>{series.overview}</p>
                     <p><strong>Data de Lançamento: </strong>{series.first_air_date}</p>
@@ -23,7 +23,7 @@ const Series = ({ series, atores }) => {
             </Row>
 
             
-            <h2 className='pt-5'>Atores</h2>
+            <h2 className='pt-5 text-slate-50'>Atores</h2>
 
             <Row className='p-3'>
 
@@ -32,7 +32,7 @@ const Series = ({ series, atores }) => {
 
 
                         <img style={{ Width: '500px', height: '200px' }} variant="top" src={'https://image.tmdb.org/t/p/w500/' + item.profile_path} />
-                        <Link href={'/actors/' + item.id} style={{ textDecoration: "none" }} ><p><em>{item.name}</em></p></Link>
+                        <Link href={'/actors/' + item.id} style={{ textDecoration: "none", color:"white" }} ><p><em>{item.name}</em></p></Link>
                     </Col>
 
                 ))}
