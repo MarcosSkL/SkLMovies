@@ -3,7 +3,7 @@ import CarouselFilmes from '@/components/CarouselFilmes';
 import requests from '@/utils/requests';
 import Head from 'next/head';
 
-const Peliculas = ({ popularMovies, forYou, bestMovies, upcomingMovies }) => {
+const Filmes = ({ popularMovies, forYou, bestMovies, upcomingMovies }) => {
   return (
     <>
       <Head>
@@ -18,6 +18,7 @@ const Peliculas = ({ popularMovies, forYou, bestMovies, upcomingMovies }) => {
         <CarouselFilmes titulo={'Melhores Filmes'} best={true} movies={bestMovies} slides={5} />
         <CarouselFilmes titulo={'Proximos Filmes'} best={true} movies={upcomingMovies} slides={5} />
         <CarouselFilmes titulo={'Para voce'} best={true} movies={forYou} slides={5} />
+        <CarouselFilmes titulo={'Generos'} genero={true} slides={5} />
       </div>
     </>
   );
@@ -50,4 +51,4 @@ export async function getServerSideProps() {
   };
 }
 
-export default Peliculas;
+export default Filmes;

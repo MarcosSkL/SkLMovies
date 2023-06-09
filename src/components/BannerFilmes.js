@@ -56,19 +56,19 @@ const BannerFilmes = ({ popularMovies, individual, movie, trailer, show }) => {
         {individual ? (
           <SingleFilmesBanner movie={movie} show={show} individual={individual} trailer={trailer} />
         ) : (
-          popularMovies.map((item) => {
+          popularMovies.map((movie) => {
             return (
-              <div key={item.id} className='h-[90vh] focus-visible:outline-none relative bg-bannerImg '>
+              <div key={movie.id} className='h-[90vh] focus-visible:outline-none relative bg-bannerImg '>
                 <div className='absolute h-[90vh] inset-0 bg-bannerImg'></div>
-                <Image priority width={1920} height={1200} className='h-[90vh] w-full object-cover focus-visible:border-none' src={requests.imgBase + item.backdrop_path} alt={item.title} />
+                <Image priority width={1920} height={1200} className='h-[90vh] w-full object-cover focus-visible:border-none' src={requests.imgBase + movie.backdrop_path} alt={movie.title} />
                 <div className='absolute bottom-[80px] text-white px-3 pl-[28px] sm:pl-[36px] md:pl-[48px] lg:pl-[60px] w-full'>
-                  <h2 className='text-center sm:text-left font-bold text-xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-7xl sm:w-[30ch] mb-3'>{item.title}</h2>
-                  <p className=' parrafo text-center sm:text-left max-w-[800px] sm:pr-4 sm:mb-6 text-ellipsis overflow-hidden md:text-lg sm:whitespace-nowrap '>{item.overview}</p>
+                  <h2 className='text-center sm:text-left font-bold text-xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-7xl sm:w-[30ch] mb-3'>{movie.title}</h2>
+                  <p className=' parrafo text-center sm:text-left max-w-[800px] sm:pr-4 sm:mb-6 text-ellipsis overflow-hidden md:text-lg sm:whitespace-nowrap '>{movie.overview}</p>
                   <div className=' gap-5 items-center hidden sm:flex'>
                     <button aria-label='Play' className='border-2 border-white rounded-full flex justify-center items-center p-2 hover:border-[#663399] hover:bg-black'>
                       <BiPlay className='w-9 h-9' />
                     </button>
-                    <Link href={'filmes/' + item.id}>
+                    <Link href={'filmes/' + movie.id}>
                       <button aria-label='Mas Información' className='px-[20px] bg-[#3e3b44b3] min-h-[4px] min-w-[144px] py-[12px] rounded-[4px] hover:border-[#663399] hover:border-2 hover:bg-black font-semibold'>Detalhes</button>
                     </Link>
                   </div>

@@ -26,12 +26,12 @@ const Series = () => {
       </Head>
       <div className='pl-[28px] sm:pl-[36px] md:pl-[48px] lg:pl-[60px] pt-28'>
 
-      <BannerSeries popularMovies={tvPopular.results.slice(0,6)} />
+      <BannerSeries popularMovies={topRated.results.slice(0,6)} />
 
-        <CarouselSeries titulo={'Series Populares'} tvshow={true} movies={tvPopular.results.slice(0, 10)} slides={5} />
-        <CarouselSeries titulo={'Melhores Series'} best={true} tvshow={true} movies={topRated.results.slice(0, 10)} slides={5} />
-        <CarouselSeries titulo={'Estreia'} best={true} movies={airingToday.results} slides={5} />
-        <CarouselSeries titulo={'Generos'} genero={true} slides={5} />
+        <CarouselSeries titulo={'Series Populares'} tvshow={true} series={tvPopular.results.slice(0, 10)} slides={5} />
+        <CarouselSeries titulo={'Melhores Series'} best={true} tvshow={true} series={topRated.results.slice(0, 10)} slides={5} />
+        <CarouselSeries titulo={'Estreia'} best={true} series={airingToday.results} slides={5} />
+        
       </div>
     </>
   );

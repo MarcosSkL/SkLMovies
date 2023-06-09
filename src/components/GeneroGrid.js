@@ -5,16 +5,16 @@ import React from 'react';
 import { BiPlay } from 'react-icons/bi';
 import { HiPlus } from 'react-icons/hi';
 
-const GeneroGrid = ({ titulo, movies, tvshow }) => {
+const GeneroGrid = ({ titulo, series, tvshow }) => {
   return (
     <section>
       <h2 className='px-[28px] sm:px-[36px] md:px-[48px] lg:px-[60px] pt-[100px] text-white text-3xl font-semibold'>{titulo}</h2>
       <div className='grid place-items-center grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 px-[28px] sm:px-[36px] md:px-[48px] lg:px-[60px] pt-[20px] gap-4'>
-        {movies.map((mov) => {
+        {series.map((mov) => {
           return (
             <Link
               href={{
-                pathname: `/filmes/${mov.id}`,
+                pathname: `/series/${mov.id}`,
                 query: {
                   show: tvshow,
                 },

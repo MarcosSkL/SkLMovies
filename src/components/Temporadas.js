@@ -3,12 +3,12 @@ import Image from 'next/image';
 import React from 'react';
 import { BsChevronDown } from 'react-icons/bs';
 
-const Temporadas = ({ handleChange, selected, movie, season }) => {
+const Temporadas = ({ handleChange, selected, serie, season }) => {
   return (
     <>
       <form className='relative w-fit mb-6 mt-[5px]'>
         <select name='temporadas' id='temporadas' onChange={handleChange} value={selected} className='  font-bold text-white bg-[#ffffff1f] mb py-4 px-3 pr-14 rounded-md appearance-none  text-base outline-none'>
-          {movie.seasons.map((season, index) => {
+          {serie.seasons.map((season, index) => {
             return (
               <React.Fragment key={season.id}>
                 {season.name === 'Specials' ? null : (
