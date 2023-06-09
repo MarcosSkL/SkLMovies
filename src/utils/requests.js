@@ -1,5 +1,5 @@
 const BASE_URL = 'https://api.themoviedb.org/3';
-const API_KEY = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkMTU4OWQ4OWM0MzNmZDFkZDdiMTg5MThhYWY0NmY1MyIsInN1YiI6IjY0MzVlMGU1OTQ1ZDM2MDBkZmM4MGFjZCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.RBFfbTrd_eOpww-WkdbmEqT4vtZQ1_iS6pTgJfvGU88";
+const API_KEY = "d1589d89c433fd1dd7b18918aaf46f53";
 
 const requests = {
   fetchPopular: `${BASE_URL}/movie/popular?api_key=${API_KEY}&language=pt-br&page=1`,
@@ -12,7 +12,7 @@ const requests = {
   latest: `${BASE_URL}/tv/latest?api_key=${API_KEY}&language=pt-br&page=1`,
   airingToday: `${BASE_URL}/tv/airing_today?api_key=${API_KEY}&language=pt-br&page=1`,
   onAir: `${BASE_URL}/tv/on_the_air?api_key=${API_KEY}&language=pt-br&page=1`,
-  imgBase: 'https://image.tmdb.org/t/p/w500/',
+  imgBase: 'https://image.tmdb.org/t/p/original/',
 };
 
 export default requests;

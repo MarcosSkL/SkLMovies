@@ -6,9 +6,9 @@ import { BiPlay } from 'react-icons/bi';
 import Slider from 'react-slick';
 import Image from 'next/image';
 import Link from 'next/link';
-import SingleMovieBanner from './SingleMovieBanner';
+import SingleFilmesBanner from './SingleFilmesBanner';
 
-const Banner = ({ popularMovies, individual, movie, trailer, show }) => {
+const BannerFilmes = ({ popularMovies, individual, movie, trailer, show }) => {
   function SampleNextArrow(props) {
     const { className, style, onClick } = props;
     return (
@@ -54,7 +54,7 @@ const Banner = ({ popularMovies, individual, movie, trailer, show }) => {
     <div className='group'>
       <Slider {...settings}>
         {individual ? (
-          <SingleMovieBanner movie={movie} show={show} individual={individual} trailer={trailer} />
+          <SingleFilmesBanner movie={movie} show={show} individual={individual} trailer={trailer} />
         ) : (
           popularMovies.map((item) => {
             return (
@@ -82,4 +82,4 @@ const Banner = ({ popularMovies, individual, movie, trailer, show }) => {
   );
 };
 
-export default Banner;
+export default BannerFilmes;

@@ -12,7 +12,7 @@ import Temporadas from '@/components/Temporadas';
 import requests from '@/utils/requests';
 
 
-const series = ({ movies, movie, genero, titulo, simil, videos, tvshow }) => {
+const IndividualMovie = ({ movies, movie, genero, titulo, simil, videos, tvshow }) => {
   const [selected, setSelected] = useState(1);
   const [season, setSeason] = useState();
 
@@ -109,7 +109,7 @@ const series = ({ movies, movie, genero, titulo, simil, videos, tvshow }) => {
                 return (
                   <Link
                     href={{
-                      pathname: `/series/${movie.id}`,
+                      pathname: `/filmes/${movie.id}`,
                       query: {
                         show: tvshow,
                       },
@@ -198,4 +198,4 @@ export async function getServerSideProps(context) {
   }
 }
 
-export default series;
+export default IndividualMovie;
