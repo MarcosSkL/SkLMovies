@@ -29,7 +29,7 @@ const GeneroGrid = ({ titulo, series, tvshow }) => {
                       <button aria-label='Play' className='rounded-full flex justify-center items-center p-[2px] bg-slate-300 hover:bg-white hover:scale-110'>
                         <BiPlay className='relative left-[2px] w-8 h-8' />
                       </button>
-                      <button aria-label='Agregar a mi lista' className='ml-2 rounded-full flex justify-center items-center p-2 bg-slate-300 hover:bg-white hover:scale-110'>
+                      <button aria-label='adicionar a minha lista' className='ml-2 rounded-full flex justify-center items-center p-2 bg-slate-300 hover:bg-white hover:scale-110'>
                         <HiPlus className=' w-5 h-5' />
                       </button>
                     </div>

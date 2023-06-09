@@ -1,7 +1,5 @@
 import React from 'react'
-import Cabecalho from './Cabecalho'
-import Header from './Header'
-import Banner from './BannerFilmes'
+
 
 
 const Pagina = (props) => {

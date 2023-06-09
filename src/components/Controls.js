@@ -32,11 +32,11 @@ const Controls = ({ handleAddToList, handleRemoveFromList, movie }) => {
         <BiPlay className='relative left-[2px] w-8 h-8' />
       </button>
       {!isAdded ? (
-        <button aria-label='Agregar a Favoritos' onClick={(e) => add(e)} className='ml-2 rounded-full flex justify-center items-center p-2 bg-slate-300 hover:bg-white hover:scale-110'>
+        <button aria-label='adicionar nos favoritos' onClick={(e) => add(e)} className='ml-2 rounded-full flex justify-center items-center p-2 bg-slate-300 hover:bg-white hover:scale-110'>
           <HiPlus className=' w-5 h-5' />
         </button>
       ) : (
-        <button aria-label='Agregado a mi lista' onClick={(e) => remove(e)} className='ml-2 rounded-full flex justify-center items-center p-2 bg-slate-300 hover:bg-white hover:scale-110'>
+        <button aria-label='adicioonar a minha lista' onClick={(e) => remove(e)} className='ml-2 rounded-full flex justify-center items-center p-2 bg-slate-300 hover:bg-white hover:scale-110'>
           <BsCheck2 className=' w-5 h-5' />
         </button>
       )}
