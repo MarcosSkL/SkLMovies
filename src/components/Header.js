@@ -88,7 +88,7 @@ const Header = () => {
               </nav>
 
              
-              <div className='text-white pt-20 mt-3 text-xs'>Desenvolvido por <a className='underline' target='_blank'rel="noreferrer" href="#">Marcos Bezerra</a></div>
+              <div className='text-white pt-20 mt-3 text-xs'>Desenvolvido por <Link href="#" className='text-gray-400 font-bold link-menu'>Marcos Bezerra</Link></div>
             </div>
           </aside>
         </>
