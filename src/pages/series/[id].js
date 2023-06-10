@@ -7,7 +7,7 @@ import { BiPlay } from 'react-icons/bi';
 import { HiPlus } from 'react-icons/hi';
 import { SlArrowRight, SlArrowLeft } from 'react-icons/sl';
 import BannerSeries from '@/components/BannerSeries';
-import GeneroGrid from '@/components/GeneroGrid';
+import GeneroGridSeries from '@/components/GeneroGridSeries';
 import Temporadas from '@/components/Temporadas';
 import requests from '@/utils/requests';
 
@@ -93,7 +93,7 @@ const series = ({ series, serie, titulo, simil, videos, tvshow }) => {
         <meta name='description' content='Desenvolvido por Marcos Bezerra' />
       </Head>
       
-        <GeneroGrid titulo={titulo} tvshow={tvshow} series={series} />
+        <GeneroGridSeries titulo={titulo} tvshow={tvshow} series={series} />
       
         <>
           <BannerSeries individual={true} serie={serie} show={tvshow} trailer={trailer} />

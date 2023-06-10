@@ -18,14 +18,12 @@ const SingleSeriesBanner = ({ serie, individual, trailer, show }) => {
         </div>
         <p className={`text-center sm:text-left max-w-[800px] sm:pr-4 sm:mb-6 ${individual ? '' : ' parrafo text-ellipsis overflow-hidden sm:whitespace-nowrap'}  md:text-lg  `}>{serie.overview}</p>
         <div className={`gap-5 items-center ${individual ? 'flex justify-center mt-3 sm:justify-start' : 'hidden'}  sm:flex`}>
-          <button aria-label='Play' className='border-2 border-white rounded-full flex justify-center items-center p-2 hover:border-[#663399] hover:bg-black'>
-            <BiPlay className='w-9 h-9' />
-          </button>
+          
 
           {trailer.length > 0 ? (
             <NextLink target='_blank' href={`https://www.youtube.com/watch?v=${trailer[0].key} `}>
-              <button aria-label='Trailer' className='flex items-center justify-center gap-2 px-[20px] bg-[#3e3b44b3] min-h-[4px] min-w-[144px] py-[12px] rounded-[4px] hover:border-[#663399] hover:border-2 hover:bg-black font-semibold'>
-                <MdOutlineLocalMovies className='w-5 h-5' /> Trailer
+              <button aria-label='Play' className='border-2 border-white rounded-full flex justify-center items-center p-2 hover:border-slate-200 hover:border-2 text-white hover:bg-gray-400'>
+                <BiPlay className='w-9 h-9' />
               </button>
             </NextLink>
           ) : (

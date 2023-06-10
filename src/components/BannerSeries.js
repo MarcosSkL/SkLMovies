@@ -27,11 +27,15 @@ const BannerSeries = ({ popularMovies, individual, serie, trailer, show }) => {
     );
   }
   const settings = {
+    className: "center",
+    centerPadding: "50px",
+    centerMode:false,
     dots: true,
     infinite: true,
-    speed: 800,
     slidesToShow: 1,
-    slidesToScroll: 1,
+    autoplay: true,
+    speed: 1000,
+    autoplaySpeed: 5000,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
     appendDots: (dots) => (
@@ -58,18 +62,18 @@ const BannerSeries = ({ popularMovies, individual, serie, trailer, show }) => {
         ) : (
           popularMovies.map((serie) => {
             return (
-              <div key={serie.id} className='h-[90vh] focus-visible:outline-none relative bg-bannerImg '>
-                <div className='absolute h-[90vh] inset-0 bg-bannerImg'></div>
+              <div key={serie.id} className='h-full focus-visible:outline-none relative bg-bannerImg '>
+                <div className='absolute h-full inset-0 bg-bannerImg'></div>
                 <Image priority width={1920} height={1200} className='h-[90vh] w-full object-cover focus-visible:border-none' src={requests.imgBase + serie.backdrop_path} alt={serie.name} />
                 <div className='absolute bottom-[80px] text-white px-3 pl-[28px] sm:pl-[36px] md:pl-[48px] lg:pl-[60px] w-full'>
-                  <h2 className='text-center sm:text-left font-bold text-xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-7xl sm:w-[30ch] mb-3'>{serie.name}</h2>
-                  <p className=' parrafo text-center sm:text-left max-w-[800px] sm:pr-4 sm:mb-6 text-ellipsis overflow-hidden md:text-lg sm:whitespace-nowrap '>{serie.overview}</p>
-                  <div className=' gap-5 items-center hidden sm:flex'>
-                    <button aria-label='Play' className='border-2 border-white rounded-full flex justify-center items-center p-2 hover:border-[#663399] hover:bg-black'>
+                  <h2 className='font-bold text-xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-7xl mb-3'>{serie.name}</h2>
+                  <p className='sm:text-left sm:pr-4 sm:mb-6 text-ellipsis overflow-hidden md:text-lg'>{serie.overview}</p>
+                  <div className='gap-5 items-center hidden sm:flex'>
+                    <button aria-label='Play' className='border-2 border-white rounded-full flex justify-center items-center p-2 hover:border-slate-200 hover:border-2 hover:bg-gray-400'>
                       <BiPlay className='w-9 h-9' />
                     </button>
                     <Link href={'series/' + serie.id}>
-                      <button aria-label='Mas Información' className='px-[20px] bg-[#3e3b44b3] min-h-[4px] min-w-[144px] py-[12px] rounded-[4px] hover:border-[#663399] hover:border-2 hover:bg-black font-semibold'>Detalhes</button>
+                      <button aria-label='Detalhes' className='px-[20px] bg-[#3e3b44b3] min-h-[4px] min-w-[144px] py-[12px] rounded-[200px] text-slate-50 hover:bg-gray-400 font-semibold'>Detalhes</button>
                     </Link>
                   </div>
                 </div>

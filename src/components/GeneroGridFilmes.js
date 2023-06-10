@@ -14,7 +14,7 @@ const GeneroGrid = ({ titulo, movies, tvshow }) => {
           return (
             <Link
               href={{
-                pathname: `/series/${mov.id}`,
+                pathname: `/filmes/${mov.id}`,
                 query: {
                   show: tvshow,
                 },

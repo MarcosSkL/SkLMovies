@@ -7,7 +7,7 @@ import { BiPlay } from 'react-icons/bi';
 import { HiPlus } from 'react-icons/hi';
 import { SlArrowRight, SlArrowLeft } from 'react-icons/sl';
 import BannerFilmes from '@/components/BannerFilmes';
-import GeneroGrid from '@/components/GeneroGrid';
+import GeneroGridFilmes from '@/components/GeneroGridFilmes';
 import Temporadas from '@/components/Temporadas';
 import requests from '@/utils/requests';
 
@@ -93,7 +93,7 @@ const IndividualMovie = ({ movies, movie, genero, titulo, simil, videos, tvshow 
         <meta name='description' content='Desenvolvido por Marcos Bezerra' />
       </Head>
       {genero ? (
-        <GeneroGrid titulo={titulo} tvshow={tvshow} movies={movies} />
+        <GeneroGridFilmes titulo={titulo} tvshow={tvshow} movies={movies} />
       ) : (
         <>
           <BannerFilmes individual={true} movie={movie} show={tvshow} trailer={trailer} />
