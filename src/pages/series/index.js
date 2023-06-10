@@ -1,43 +1,40 @@
-import Link from 'next/link'
-import React, { useEffect, useState } from 'react'
-import { Button, Card, Col, Row } from 'react-bootstrap'
-import Pagina from '../../components/Pagina'
-import apiMovies from '../../services/apiMovies'
+import BannerSeries from '@/components/BannerSeries';
+import CarouselSeries from '@/components/CarouselSeries';
+import requests from '@/utils/requests';
+import Head from 'next/head';
+import useSWR from 'swr';
+import Image from 'next/image';
+import Link from 'next/link';
 
-const index = ({series}) => {
 
-    return (
 
-        <Pagina titulo="Series">
+const fetcher = (url) => fetch(url).then((res) => res.json());
 
-            <Row className="px-1 mx-1">
-                {series.map(item => (
-                    <Col key={item.id} md={3} className="mb-4" >
-                        <Card>
-                            <Card.Img style={{ Width: '100%', height: '100%' }} variant="top" src={'https://image.tmdb.org/t/p/w500/' + item.poster_path} alt={item.name} />
-                            <Card.Body className='bg-secondary text-white'>
-                                <Card.Title>{item.name}</Card.Title>
-                                <p className='textwhite'>Lançamento: <strong>{item.first_air_date}</strong></p>
-                                <div className="d-flex flex-column align-items-end">
-                                    <Link href={'series/' + item.id} className='btn btn-info text-white'>Detalhes</Link>
-                                </div>
-                            </Card.Body>
-                        </Card>
-                    </Col>
-                ))}
-            </Row>
-        </Pagina>
-    )
-}
+const Series = () => {
+  const { data: tvPopular } = useSWR(requests.fetchTVPopular, fetcher);
+  const { data: topRated } = useSWR(requests.topRated, fetcher);
+  const { data: airingToday } = useSWR(requests.airingToday, fetcher);
+  const { data: onAir } = useSWR(requests.onAir, fetcher);
 
-export default index
+  if (!tvPopular || !topRated || !airingToday || !onAir) return <div>Loading...</div>;
 
-export async function getServerSideProps(context) {
+  return (
+    <>
+      <Head>
+        <title>Movies SkL</title>
+        <meta name='description' content='Desenvolvido por Marcos Bezerra' />
+      </Head>
+      <div className='pl-[28px] sm:pl-[36px] md:pl-[48px] lg:pl-[60px] pt-28'>
 
-    const seriesAtor = await apiMovies.get('/tv/top_rated/?language=pt-BR')
-    const series = seriesAtor.data.results
+      <BannerSeries popularMovies={topRated.results.slice(0,6)} />
 
-    return {
-      props: {series}
-    }
-  }
+        <CarouselSeries titulo={'Series Populares'} tvshow={true} series={tvPopular.results.slice(0, 10)} slides={5} />
+        <CarouselSeries titulo={'Melhores Series'} best={true} tvshow={true} series={topRated.results.slice(0, 10)} slides={5} />
+        <CarouselSeries titulo={'Estreia'} best={true} series={airingToday.results} slides={5} />
+        
+      </div>
+    </>
+  );
+};
+
+export default Series;

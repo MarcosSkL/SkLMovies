@@ -52,7 +52,7 @@ const Header = () => {
           <header className={`py-4 px-36 sm:px-0 md:px-36 lg:px-36  text-gray-50 z-10 font-bold flex justify-between items-center fixed w-full transition-all duration-500 ${isScrolled ? 'bg-[#0f0f0ffa]' : 'bg-headerGradient'} select-none`}>
             <div className='flex items-center gap-6'>
               <RxHamburgerMenu className='w-6 h-6 cursor-pointer' onClick={navHandler} />
-              <Link href='/movies' className='hidden md:block link-menu text-gray-400 no-underline'>
+              <Link href='/filmes' className='hidden md:block link-menu text-gray-400 no-underline'>
                 Filmes
               </Link>
               <Link href='/series' className='link-menu select-none text-gray-400 no-underline'>
@@ -78,6 +78,7 @@ const Header = () => {
                 <RiCloseFill className='w-[30px] h-[30px] cursor-pointer relative -left-[2px] hover:text-white' onClick={navHandler} />
                 <ul className='font-normal text-[19px] md:text-2xl'>
                   
+                  <Link href={'/'} className='mt-6 link-menu text-gray-500 no-underline '>Pagina Inicial</Link>
                   <li className='mt-6 link-menu select-none text-gray-500 '>Populares</li>
                   <li className='mt-6 link-menu select-none text-gray-500 '>Recém Lançados</li>
                   <li className='mt-6 link-menu select-none text-gray-500 '>Últimos Dias</li>

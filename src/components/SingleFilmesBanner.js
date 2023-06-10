@@ -1,11 +1,11 @@
 import requests from '../utils/requests';
 import Image from 'next/image';
-import Link from 'next/link';
+import NextLink from 'next/link';
 import React from 'react';
 import { BiPlay } from 'react-icons/bi';
 import { MdOutlineLocalMovies } from 'react-icons/md';
 
-const SingleMovieBanner = ({ movie, individual, trailer, show }) => {
+const SingleFilmesBanner = ({ movie, individual, trailer, show }) => {
   return (
     <div key={movie.id} className='h-[90vh] focus-visible:outline-none relative bg-bannerImg '>
       <div className='absolute h-[90vh] inset-0 bg-bannerImg'></div>
@@ -23,14 +23,14 @@ const SingleMovieBanner = ({ movie, individual, trailer, show }) => {
           </button>
 
           {trailer.length > 0 ? (
-            <Link target='_blank' href={`https://www.youtube.com/watch?v=${trailer[0].key} `}>
+            <NextLink target='_blank' href={`https://www.youtube.com/watch?v=${trailer[0].key} `}>
               <button aria-label='Trailer' className='flex items-center justify-center gap-2 px-[20px] bg-[#3e3b44b3] min-h-[4px] min-w-[144px] py-[12px] rounded-[4px] hover:border-[#663399] hover:border-2 hover:bg-black font-semibold'>
-                <MdOutlineLocalMovies className='w-5 h-5' /> TRÁILER
+                <MdOutlineLocalMovies className='w-5 h-5' /> Trailer
               </button>
-            </Link>
+            </NextLink>
           ) : (
             <button aria-label='Trailer' className='flex items-center justify-center gap-2 px-[20px] bg-[#3e3b44b3] min-h-[4px] min-w-[144px] py-[12px] rounded-[4px] hover:border-[#663399] hover:border-2 hover:bg-black font-semibold'>
-              <MdOutlineLocalMovies className='w-5 h-5' /> TRÁILER
+              <MdOutlineLocalMovies className='w-5 h-5' /> Trailer
             </button>
           )}
         </div>
@@ -39,4 +39,4 @@ const SingleMovieBanner = ({ movie, individual, trailer, show }) => {
   );
 };
 
-export default SingleMovieBanner;
+export default SingleFilmesBanner;

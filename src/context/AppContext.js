@@ -9,16 +9,6 @@ const AppProvider = ({children}) => {
     const [currentUser, setCurrentUser] = useState(null)
     const [myList, setMyList] = useState([])
 
-    useEffect(() => {
-      onAuthStateChanged(auth,(user) => {
-        if (user) {
-            setCurrentUser(user)
-        } else{
-            setCurrentUser(null)
-            router.push('/login')
-        }
-      })
-    }, [auth])
 
     const addToList = (movie) => {
       if(myList.find((listMovie) => movie.id === listMovie.id)){
