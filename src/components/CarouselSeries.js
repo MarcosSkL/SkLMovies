@@ -109,7 +109,7 @@ const CarouselSeries = (props) => {
                 key={serie.id}
               >
                 <div className={`pr-5 w-full ${props.tendencia ? 'custom' : ''}`}>
-                  <div className={`relative focus-visible:outline-none outline-[rgb(0,0,0,0)] outline outline-2 outline-offset-[-2px] transition-all duration-300 hover:outline-[#663399]`}>
+                  <div className={`relative focus-visible:outline-none outline-transparent outline outline-2 -outline-offset-0 transition-all duration-300 hover:outline-[#1839a8]`}>
                     <Image width={props.genero ? 250 : 360} height={200} src={props.genero ? serie.img.src : props.best || props.tendencia ? requests.imgBase + serie.poster_path : requests.imgBase + serie.backdrop_path} alt={props.genero ? serie.alt : serie.name || serie.name || serie.original_name} />
                     {props.tendencia ? (
                       <div className='absolute z-10 top-0 left-0 w-10 h-6 bg-white rounded-sm text-center flex justify-center items-center'>

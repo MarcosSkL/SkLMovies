@@ -6,8 +6,8 @@ import { BsChevronDown } from 'react-icons/bs';
 const Temporadas = ({ handleChange, selected, serie, season }) => {
   return (
     <>
-      <form className='relative w-fit mb-6 mt-[5px]'>
-        <select name='temporadas' id='temporadas' onChange={handleChange} value={selected} className='  font-bold text-white bg-[#ffffff1f] mb py-4 px-3 pr-14 rounded-md appearance-none  text-base outline-none'>
+      <form className='relative w-fit mb-8 mt-1'>
+        <select name='temporadas' id='temporadas' onChange={handleChange} value={selected} className='  font-bold text-white bg-[#ffffff1f] mb py-4 px-5 rounded-full appearance-none  text-base outline-none'>
           {serie.seasons.map((season, index) => {
             return (
               <React.Fragment key={season.id}>
@@ -32,6 +32,7 @@ const Temporadas = ({ handleChange, selected, serie, season }) => {
               <Image width={300} height={250} src={requests.imgBase + episode.still_path} alt={episode.name}></Image>
               <h2 className='font-bold text-gray-300 whitespace-nowrap overflow-hidden text-ellipsis max-w-[300px]'>{index + 1 + '.   ' + episode.name}</h2>
               <h3 className='text-gray-400 text-sm'>{episode.runtime} MIN</h3>
+              <p className='text-gray-400'>{episode.overview}</p>
             </article>
           );
         })}

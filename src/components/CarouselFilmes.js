@@ -109,11 +109,11 @@ const CarouselFilmes = (props) => {
                 key={movie.id}
               >
                 <div className={`pr-5 w-full ${props.tendencia ? 'custom' : ''}`}>
-                  <div className={`relative focus-visible:outline-none outline-[rgb(0,0,0,0)] outline outline-2 outline-offset-[-2px] transition-all duration-300 hover:outline-[#663399]`}>
+                  <div className={`relative focus-visible:outline-none outline-transparent outline outline-2 -outline-offset-0 transition-all duration-300 hover:outline-[#1839a8]`}>
                     <Image width={props.genero ? 250 : 360} height={200} src={props.genero ? movie.img.src : props.best || props.tendencia ? requests.imgBase + movie.poster_path : requests.imgBase + movie.backdrop_path} alt={props.genero ? movie.alt : movie.title || movie.name || movie.original_name} />
                     {props.tendencia ? (
                       <div className='absolute z-10 top-0 left-0 w-10 h-6 bg-white rounded-sm text-center flex justify-center items-center'>
-                        <span className='text-[12px] font-extrabold pt-[2px]'>#</span>
+                        <span className='text-[12px] font-extrabold pt-[2px]'></span>
                         <span className='text-[14px] font-bold'>{index + 1}</span>
                       </div>
                     ) : null}

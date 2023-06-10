@@ -90,7 +90,7 @@ const series = ({ series, serie, titulo, simil, videos, tvshow }) => {
     <>
       <Head>
         <title>Marcos SkL</title>
-        <meta name='description' content='Desenvolvido por Marcos Bezerra' />
+        <meta name='descrição' content='Desenvolvido por Marcos Bezerra' />
       </Head>
       
         <GeneroGridSeries titulo={titulo} tvshow={tvshow} series={series} />

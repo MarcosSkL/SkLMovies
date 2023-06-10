@@ -69,9 +69,7 @@ const BannerSeries = ({ popularMovies, individual, serie, trailer, show }) => {
                   <h2 className='font-bold text-xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-7xl mb-3'>{serie.name}</h2>
                   <p className='sm:text-left sm:pr-4 sm:mb-6 text-ellipsis overflow-hidden md:text-lg'>{serie.overview}</p>
                   <div className='gap-5 items-center hidden sm:flex'>
-                    <button aria-label='Play' className='border-2 border-white rounded-full flex justify-center items-center p-2 hover:border-slate-200 hover:border-2 hover:bg-gray-400'>
-                      <BiPlay className='w-9 h-9' />
-                    </button>
+                   
                     <Link href={'series/' + serie.id}>
                       <button aria-label='Detalhes' className='px-[20px] bg-[#3e3b44b3] min-h-[4px] min-w-[144px] py-[12px] rounded-[200px] text-slate-50 hover:bg-gray-400 font-semibold'>Detalhes</button>
                     </Link>

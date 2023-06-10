@@ -31,6 +31,7 @@ const Series = () => {
         <CarouselSeries titulo={'Series Populares'} best={true} series={tvPopular.results.slice(0, 10)} slides={5} />
         <CarouselSeries titulo={'Melhores Series'} best={true} tvshow={true} series={topRated.results.slice(0, 10)} slides={5} />
         <CarouselSeries titulo={'Estreia'} best={true} series={airingToday.results} slides={5} />
+        <CarouselSeries titulo={'No Ar'} best={true} series={onAir.results} slides={5} />
         
       </div>
     </>
