@@ -1,8 +1,8 @@
-import Accion from '../public/genres/accion.jpg'
-import Animacion from '../public/genres/animacion.jpg'
+import Ação from '../public/genres/ação.jpg'
+import Animação from '../public/genres/animação.jpg'
 import Comedia from '../public/genres/comedia.jpg'
-import Crimen from '../public/genres/crimen.jpg'
-import Documentales from '../public/genres/documentales.jpg'
+import Crimes from '../public/genres/crimes.jpg'
+import Documentarios from '../public/genres/Documentarios.jpg'
 import Drama from '../public/genres/drama.jpg'
 import Fantasia from '../public/genres/fantasia.jpg'
 import Infantil from '../public/genres/infantil.jpg'
@@ -11,13 +11,13 @@ import Terror from '../public/genres/terror.jpg'
 const genres = [
     {
         id: 28,
-        img: Accion,
-        alt: 'Accion'
+        img: Ação,
+        alt: 'Ação'
     },
     {
         id: 16,
-        img: Animacion,
-        alt:'Animación'
+        img: Animação,
+        alt:'Animação'
     },
     {
         id: 35,
@@ -26,13 +26,13 @@ const genres = [
     },
     {
         id: 80,
-        img: Crimen,
-        alt:'Crimen'
+        img: Crimes,
+        alt:'Crimes'
     },
     {
         id: 99,
-        img: Documentales,
-        alt:'Documentales'
+        img: Documentarios,
+        alt:'Documentarios'
     },
     {
         id: 18,

@@ -18,7 +18,8 @@ const Filmes = ({ popularMovies, forYou, bestMovies, upcomingMovies }) => {
         <CarouselFilmes titulo={'Melhores Filmes'} best={true} movies={bestMovies} slides={5} />
         <CarouselFilmes titulo={'Proximos Filmes'} best={true} movies={upcomingMovies} slides={5} />
         <CarouselFilmes titulo={'Para voce'} best={true} movies={forYou} slides={5} />
-        <CarouselFilmes titulo={'Generos'} genero={true} slides={5} />
+
+     
       </div>
     </>
   );

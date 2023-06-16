@@ -79,16 +79,21 @@ const Header = () => {
                 <ul className='font-normal text-[19px] md:text-2xl'>
                   
                   <Link href={'/'} className='mt-6 link-menu text-gray-500 no-underline '>Pagina Inicial</Link>
-                  <li className='mt-6 link-menu select-none text-gray-500 '>Populares</li>
-                  <li className='mt-6 link-menu select-none text-gray-500 '>Recém Lançados</li>
-                  <li className='mt-6 link-menu select-none text-gray-500 '>Últimos Dias</li>
-                  <li className='mt-6 link-menu select-none text-gray-500 '>Mais Vistos</li>
-                  <li className='mt-6 link-menu select-none text-gray-500 '>Tendencia</li>
+                  <Link href={'/filmes/28?show=&genero=true&titulo=Ação'} className='no-underline'><li className='mt-6 link-menu select-none text-gray-500'>Ação</li></Link>
+                  <Link href={'/filmes/16?show=&genero=true&titulo=Animação'} className='no-underline'><li className='mt-6 link-menu select-none text-gray-500'>Animação</li></Link>
+                  <Link href={'/filmes/35?show=&genero=true&titulo=Comedia'} className='no-underline'><li className='mt-6 link-menu select-none text-gray-500'>Comedia</li></Link>
+                  <Link href={'/filmes/80?show=&genero=true&titulo=Crimes'} className='no-underline'><li className='mt-6 link-menu select-none text-gray-500'>Crimes</li></Link>
+                  <Link href={'/filmes/99?show=&genero=true&titulo=Documentarios'} className='no-underline'><li className='mt-6 link-menu select-none text-gray-500'>Documentarios</li></Link>
+                  <Link href={'/filmes/18?show=&genero=true&titulo=Drama'} className='no-underline'><li className='mt-6 link-menu select-none text-gray-500'>Drama</li></Link>
+                  <Link href={'/filmes/14?show=&genero=true&titulo=Fantasia'} className='no-underline'><li className='mt-6 link-menu select-none text-gray-500'>Fantasia e Ficção científica</li></Link>
+                  <Link href={'/filmes/10751?show=&genero=true&titulo=Infantil'} className='no-underline'><li className='mt-6 link-menu select-none text-gray-500'>infantil</li></Link>
+                  <Link href={'/filmes/27?show=&genero=true&titulo=Terror'} className='no-underline'><li className='mt-6 link-menu select-none text-gray-500'>Terror e Suspense</li></Link>
+               
                 </ul>
               </nav>
 
              
-              <div className='text-white pt-20 mt-3 text-xs'>Desenvolvido por <a className='underline' target='_blank'rel="noreferrer" href="#">Marcos Bezerra</a></div>
+              <div className='text-white pt-20 mt-3 text-xs'>Desenvolvido por <Link href="#" className='text-gray-400 font-bold link-menu'>Marcos Bezerra</Link></div>
             </div>
           </aside>
         </>
