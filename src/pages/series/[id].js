@@ -12,7 +12,7 @@ import Temporadas from '@/components/Temporadas';
 import requests from '@/utils/requests';
 
 
-const series = ({ series, serie, titulo, simil, videos, tvshow }) => {
+const Series = ({ series, serie, titulo, simil, videos, tvshow }) => {
   const [selected, setSelected] = useState(1);
   const [season, setSeason] = useState();
 
@@ -171,4 +171,4 @@ export async function getServerSideProps(context) {
 
  
 
-export default series;
+export default Series;
