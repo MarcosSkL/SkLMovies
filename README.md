@@ -1,4 +1,4 @@
-# SkL-Movies
+# SKL Movies
 => Projeto criado para realização de atividades práticas.
 
 
