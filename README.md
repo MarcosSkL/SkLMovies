@@ -1,8 +1,5 @@
 # SKL Movies
-=> Projeto criado para realização de atividades práticas.
-
-
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Projeto criado para realização de atividades práticas.
 
 ## Getting Started
 
@@ -16,12 +13,12 @@ yarn dev
 pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+ABRA [http://localhost:3000](http://localhost:3000) NO SEU NAVEGADOR PARA VER O PROJETO.
 
 # Projeto Criado a partir da API da API do ThemovieDB
     https://developers.themoviedb.org/3/getting-started/introduction
 
-# ReactJS
+# React JS
 
 ### Criar um projeto
 
