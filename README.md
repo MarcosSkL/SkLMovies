@@ -1,11 +1,38 @@
-# SKL Movies
-Projeto criado para realização de atividades práticas.
+# SKLMovies
 
-## Getting Started
 
-Run the development server:
+<img src="" alt="Print site">
 
-```bash
+
+## 💼 Tecnologias utilizadas
+
+- Typescript;
+- NodeJS
+- NextJS;
+- Tailwind CSS;
+
+---
+
+
+## 💻 Pré-requisitos
+
+Antes de começar, verifique se você atendeu aos seguintes requisitos:
+
+- Você instalou a versão mais recente de `NodeJS`
+- Você tem uma máquina `Windows / Linux / Mac`
+
+## 🚀 Instalando
+
+Para instalar, siga estas etapas utilzando uma IDE:
+```
+npm i
+```
+
+## ☕ Usando
+
+Para usar, siga estas etapas utilzando uma IDE:
+
+```
 npm run dev
 # or
 yarn dev
@@ -18,23 +45,6 @@ ABRA [http://localhost:3000](http://localhost:3000) NO SEU NAVEGADOR PARA VER O 
 # Projeto Criado a partir da API da API do ThemovieDB
     https://developers.themoviedb.org/3/getting-started/introduction
 
-# React JS
-
-### Criar um projeto
-
-    npx create-next-app@latest nome-projeto
-
-### Instalar o bootstrap
-
-    npm install react-bootstrap bootstrap
-
-### Axios para API
-
-    npm i axios
-
-### Iniciar o projeto
-
-    npm run dev
 
 
 
