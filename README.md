@@ -42,7 +42,7 @@ pnpm dev
 
 ABRA [http://localhost:3000](http://localhost:3000) NO SEU NAVEGADOR PARA VER O PROJETO.
 
-# Projeto Criado a partir da API da API do ThemovieDB
+# Projeto Criado a partir da API do ThemovieDB
     https://developers.themoviedb.org/3/getting-started/introduction
 
 
