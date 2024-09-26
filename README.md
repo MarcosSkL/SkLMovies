@@ -1,7 +1,7 @@
 # SKLMovies
 
 
-<img src="" alt="Print site">
+<img src="https://portifolioweb-nu.vercel.app/_next/static/media/SKLMovies.1a003b90.png" alt="Print site">
 
 
 ## 💼 Tecnologias utilizadas
